@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+h5py
+numpy
+openslide-python
+pillow
+torch

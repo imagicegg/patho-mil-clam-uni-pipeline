@@ -1,0 +1,22 @@
+{
+  "name": "patho-mil-clam-uni-pipeline",
+  "private": true,
+  "packageManager": "pnpm@11.0.9",
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:bridge\" \"pnpm dev:api\" \"pnpm dev:web\"",
+    "dev:desktop": "concurrently \"pnpm dev:bridge\" \"pnpm dev:api\" \"pnpm dev:web\" \"pnpm dev:desktop-shell\"",
+    "dev:bridge": "node scripts/run-ml-bridge.mjs",
+    "dev:api": "pnpm --filter @patho/api start:dev",
+    "dev:desktop-shell": "pnpm --filter @patho/desktop dev",
+    "dev:web": "pnpm --filter @patho/web dev",
+    "build:api": "pnpm --filter @patho/api build",
+    "build:desktop": "pnpm --filter @patho/desktop build",
+    "build:web": "pnpm --filter @patho/web build",
+    "lint:api": "pnpm --filter @patho/api lint",
+    "lint:desktop": "pnpm --filter @patho/desktop lint",
+    "lint:web": "pnpm --filter @patho/web lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

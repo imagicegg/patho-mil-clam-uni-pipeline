@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+
+allowBuilds:
+  '@nestjs/core': true
+  electron: true
+  sharp: true

@@ -1,0 +1,14 @@
+{
+  "name": "@patho/desktop",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "wait-on tcp:127.0.0.1:4000 http://127.0.0.1:3000 && electron .",
+    "build": "node -e \"console.log('Desktop shell does not require a separate build step.')\"",
+    "lint": "node --check main.js && node --check preload.js"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "wait-on": "^8.0.5"
+  }
+}
